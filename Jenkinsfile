@@ -1,3 +1,5 @@
+properties([pipelineTriggers([githubPush()])])
+
 node('linux') {
     stage('Unit Tests') {
       git 'https://github.com/alqaa/java-project.git'
